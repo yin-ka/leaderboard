@@ -1,4 +1,4 @@
-import myScore from './myscore.js';
+import myScore from './myScore.js';
 
 const displayScore = async (tbody, url) => {
   const leaderboardData = await myScore(url);
