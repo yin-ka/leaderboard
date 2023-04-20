@@ -1,3 +1,31 @@
-.hello {
-  color: red;
+
+body {
+  background: rgb(90, 57, 57);
+  background: radial-gradient(circle, rgba(231, 231, 231, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  color: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  transition: all 0.5s ease-in-out;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+h3:hover {
+  border: 2px solid rgb(10, 7, 7);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.title:hover {
+  border: 2px solid rgb(10, 7, 7);
+  transform: scale(1.1);
+  opacity: 1;
 }
