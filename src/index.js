@@ -1,22 +1,17 @@
-// eslint-disable-next-line no-unused-vars
-import _ from 'lodash';
 import './style.css';
+import Score from './modules/getScore.js';
+import postScore from './modules/postScore.js';
 
-const leaderboardData = [
-  { name: 'Name', score: 100 },
-  { name: 'Name', score: 45 },
-  { name: 'Name', score: 27 },
-  { name: 'Name', score: 57 },
-  { name: 'Name', score: 27 },
-  { name: 'Name', score: 10 },
-];
+const Form = document.querySelector('form');
+const refresh = document.querySelector('#refresh');
 
-const leaderBoardBody = document.querySelector('.table-body');
-const leaderboard = leaderboardData.map((data) => `
-  <tr>
-    <td scope="row">${data.name}:</td>
-    <td>${data.score}</td>
-  </tr>
-`).join('');
+const score = new Score();
+score.render();
 
-leaderBoardBody.innerHTML = leaderboard;
+refresh.addEventListener('click', () => {
+  window.location.reload();
+});
+Form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  postScore(score.url, score.render);
+});
