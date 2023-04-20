@@ -1,6 +1,5 @@
 
 body {
-  background: rgb(90, 57, 57);
   background: radial-gradient(circle, rgba(231, 231, 231, 1) 0%, rgba(241, 241, 241, 1) 100%);
   color: #000;
   font-family: Georgia, 'Times New Roman', Times, serif;
